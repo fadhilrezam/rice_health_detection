@@ -75,7 +75,8 @@ def app():
                 - Baik gejala kresek maupun hawar, gejala dimulai dari tepi daun, berwarna keabu-abuan dan lama-lama daun menjadi kering.
             - Penyakit ini termasuk dalam kategori penyakit yang terbawa oleh benih (seed borne diseases). Penyakit akan berkembang dari benih padi yang terinfeksi oleh patogen.
             """)
-    b2 = Image.open("b2.jpg")
+    b2_path = Path(__file__).parent / 'b2.jpg'       
+    b2 = Image.open(b2_path)
     b2 = b2.resize((round(b2.size[0]*0.15), round(b2.size[1]*0.15)))
     st.image(b2, use_column_width="auto")
     with st.expander("Pencegahan"):
