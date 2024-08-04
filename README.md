@@ -12,7 +12,7 @@ Hi, my name is **Fadhil Reza Maulana**. Along with my teammate, [M. Naufal Aulia
 * output: Directory containing images of rice plants used for the rice disease model.
 * PeSen (Petani Senang).pptx: PowerPoint presentation about our project and application.
 **Deployment**
-The project is deployed and can be accessed at [PeSen Deployment]().
+The project is deployed and can be accessed at [PeSen Deployment](https://paddysafe.streamlit.app/).
 
 Contact
 If you have any questions, feel free to reach out. Thank you!
