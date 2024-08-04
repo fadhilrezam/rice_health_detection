@@ -5,6 +5,7 @@ from PIL import Image, ImageOps
 import numpy as np
 from tensorflow import keras
 import os
+from pathlib import Path
 
 def app():
     #st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -34,7 +35,8 @@ def app():
              - Jamur ini dapat menginfeksi pada semua fase pertumbuhan tanaman padi, mulai dari fase pembibitan sampai pada fase generatif.
              - Daun terdapat becak coklat berbentuk belah ketupat dan memanjang searah dengan urat daun.
             """)
-    b1 = Image.open("b1.jpg")
+    b1_path = Path(__file__).parent / 'b1.jpg'       
+    b1 = Image.open(b1_path)
     b1 = b1.resize((round(b1.size[0]*0.15), round(b1.size[1]*0.15)))
     st.image(b1, use_column_width="auto")
     with st.expander("Pencegahan"):
