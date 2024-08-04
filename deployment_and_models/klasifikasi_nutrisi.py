@@ -121,7 +121,10 @@ def app():
     
     #@st.cache(allow_output_mutation=True)
     def load_model():
-        model_path = 'rice_nutrient_model.hdf5'
+        # model_path = 'rice_nutrient_model.hdf5'
+        model_path = os.path.join(os.path.dirname(__file__), 'rice_nutrient_model.hdf5')
+
+        
         if os.path.exists(model_path):
             model = tf.keras.models.load_model(model_path)
             return model
