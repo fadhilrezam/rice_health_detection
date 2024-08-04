@@ -4,6 +4,7 @@ from PIL import Image, ImageOps
 import numpy as np
 import os
 from tensorflow import keras
+from pathlib import Path
 
 def app():
     
@@ -11,7 +12,9 @@ def app():
 
     st.write("Defisiensi gizi pada tanaman padi sangat mempengaruhi kualitas padi tersebut. Terdapat tiga kandungan yang merupakan makronutrien utama dalam tanaman padi, yaitu Nitrogen (N), Fosfor (P), dan Kalium (K) (Shrestha dkk, 2020).")
 
-    im = Image.open("pone.0113200.g001.tif")
+    im_path = Path(__file__).parent / 'pone.0113200.g001.tif'       
+    im = Image.open(im_path)
+    # im = Image.open("pone.0113200.g001.tif")
     st.image(im, caption="Perbandingan antara daun padi yang sehat dengan yang mengalami defisiensi gizi (Chen L dkk, 2014).")
 
     st.markdown("***")
@@ -20,7 +23,9 @@ def app():
     st.write("""
              - Daun tua atau seluruh tanaman berwarna hijau kekuningan.
              """)
-    n0 = Image.open("n0.JPG")
+    n0_path = Path(__file__).parent / 'n0.JPG'       
+    n0 = Image.open(n0_path)
+    # n0 = Image.open("n0.JPG")
     st.image(n0, use_column_width="auto")
     with st.expander("Pencegahan"):
         st.subheader("Pencegahan:")
@@ -42,7 +47,9 @@ def app():
              - Ujung daun berwarna coklat kekuningan.
              - Daun cenderung kecil, pendek, dan memiliki warna hijau tua yang cukup gelap, dan terkadang muncul warna ungu kemerahan pada daun tersebut.
              """)
-    p0 = Image.open("p0.JPG")
+    p0_path = Path(__file__).parent / 'p0.JPG'       
+    p0 = Image.open(p0_path)
+    # p0 = Image.open("p0.JPG")
     st.image(p0, use_column_width="auto")   
     with st.expander("Pencegahan"):
         st.subheader("Pencegahan:")
@@ -65,7 +72,9 @@ def app():
              - Ujung daun berwarna coklat kekuningan.
              - Garis-garis kuning mungkin muncul di sepanjang sela-sela daun dan daun bagian bawah mungkin menekuk ke bawah.
             """)
-    k0 = Image.open("k0.JPG")
+    k0_path = Path(__file__).parent / 'k0.JPG'       
+    k0 = Image.open(k0_path)
+    # k0 = Image.open("k0.JPG")
     st.image(k0, use_column_width="auto")
     with st.expander("Pencegahan"):
         st.subheader("Pencegahan:")
@@ -90,31 +99,43 @@ def app():
     col1, col2, col3 = st.columns(3)
     with col1:
         st.write("Defisiensi Nitrogen (N)")
-        n1 = Image.open("n1.JPG")
+        n1_path = Path(__file__).parent / 'n1.JPG'       
+        n1 = Image.open(n1_path)
+        # n1 = Image.open("n1.JPG")
         n1 = n1.resize((round(n1.size[0]*0.15), round(n1.size[1]*0.15)))
         st.image(n1)
     with col2:
         st.write("Defisiensi Fosfor (P)")
-        p1 = Image.open("p1.JPG")
+        p1_path = Path(__file__).parent / 'p1.JPG'       
+        p1 = Image.open(p1_path)
+        # p1 = Image.open("p1.JPG")
         p1 = p1.resize((round(p1.size[0]*0.15), round(p1.size[1]*0.15)))
         st.image(p1)
     with col3:
         st.write("Defisiensi Kalium (K)")
-        k1 = Image.open("k1.JPG")
+        k1_path = Path(__file__).parent / 'k1.JPG'       
+        k1 = Image.open(k1_path)
+        # k1 = Image.open("k1.JPG")
         k1 = k1.resize((round(k1.size[0]*0.15), round(k1.size[1]*0.15)))
         st.image(k1)
         
     st.subheader("Gambar Horizontal:")
     st.write("Defisiensi Nitrogen (N)")
-    n2 = Image.open("n2.JPG")
+    n2_path = Path(__file__).parent / 'n2.JPG'       
+    n2 = Image.open(n2_path)
+    # n2 = Image.open("n2.JPG")
     st.image(n2)
         
     st.write("Defisiensi Fosfor (P)")
-    p2 = Image.open("p2.JPG")
+    p2_path = Path(__file__).parent / 'p2.JPG'       
+    p2 = Image.open(p2_path)
+    # p2 = Image.open("p2.JPG")
     st.image(p2)
 
     st.write("Defisiensi Kalium (K)")
-    k2 = Image.open("k2.JPG")
+    k2_path = Path(__file__).parent / 'k2.JPG'       
+    k2 = Image.open(k2_path)
+    # k2 = Image.open("k2.JPG")
     st.image(k2)
 
     st.markdown("***")
