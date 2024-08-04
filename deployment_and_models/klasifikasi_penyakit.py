@@ -110,6 +110,7 @@ def app():
             """)
     t1_path = Path(__file__).parent / 't1.jpg'       
     t1 = Image.open(t1_path)
+    
     # t1 = Image.open("t1.jpg")
     t1 = t1.resize((round(t1.size[0]*0.15), round(t1.size[1]*0.15)))
     st.image(t1, use_column_width="auto")
