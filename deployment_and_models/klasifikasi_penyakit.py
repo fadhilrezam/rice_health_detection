@@ -108,7 +108,9 @@ def app():
              - Penyakit tungro disebabkan oleh dua jenis virus yaitu virus yang berbentuk batang atau virus batang tungro padi Rice tungro bacilliform virus (RTBV) dan virus berbentuk bulat atau virus bulat tungro padi Rice tungro spherical virus (RTSV).
                 - Kedua virus tersebut ditularkan oleh beberapa spesies wereng hijau dan wereng daun lainnya.
             """)
-    t1 = Image.open("t1.jpg")
+    t1_path = Path(__file__).parent / 't1.jpg'       
+    b1 = Image.open(t1_path)
+    # t1 = Image.open("t1.jpg")
     t1 = t1.resize((round(t1.size[0]*0.15), round(t1.size[1]*0.15)))
     st.image(t1, use_column_width="auto")
     with st.expander("Pencegahan"):
