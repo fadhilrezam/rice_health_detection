@@ -11,7 +11,7 @@ def app():
     #@st.cache(allow_output_mutation=True)
 
     def load_model():
-        model_path = 'models/rice_disease_model.hdf5'
+        model_path = 'rice_disease_model.hdf5'
         if os.path.exists(model_path):
             model = tf.keras.models.load_model(model_path)
             return model
