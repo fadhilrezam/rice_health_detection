@@ -110,7 +110,7 @@ def app():
             """)
     t1_path = Path(__file__).parent / 't1.jpg'       
     t1 = Image.open(t1_path)
-    
+
     # t1 = Image.open("t1.jpg")
     t1 = t1.resize((round(t1.size[0]*0.15), round(t1.size[1]*0.15)))
     st.image(t1, use_column_width="auto")
@@ -144,17 +144,23 @@ def app():
     col1, col2, col3 = st.columns(3)
     with col1:
         st.write("Penyakit Blas")
-        b11 = Image.open("b11.jpg")
+        b11_path = Path(__file__).parent / 'b11.jpg'       
+        b11 = Image.open(b11_path)
+        # b11 = Image.open("b11.jpg")
         b11 = b11.resize((round(b11.size[0]*0.15), round(b11.size[1]*0.15)))
         st.image(b11)
     with col2:
         st.write("Penyakit Blight")
-        b21 = Image.open("b21.jpg")
+        b21_path = Path(__file__).parent / 'b21.jpg'       
+        b21 = Image.open(b21_path)
+        # b21 = Image.open("b21.jpg")
         b21 = b21.resize((round(b21.size[0]*0.15), round(b21.size[1]*0.15)))
         st.image(b21)
     with col3:
         st.write("Penyakit Tungro")
-        t2 = Image.open("t2.jpg")
+        t2_path = Path(__file__).parent / 't2.jpg'       
+        t2 = Image.open(t2_path)
+        # t2 = Image.open("t2.jpg")
         t2 = t2.resize((round(t2.size[0]*0.15), round(t2.size[1]*0.15)))
         st.image(t2)
     
